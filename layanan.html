@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <link rel="stylesheet" href="styles.css">
+    <title>Bengkel Sugan Sugih</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="1.jpg" alt="Logo" />
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       <marquee> <h1>Selamat Datang di Website Bengkel Sugan Sugih</h1></marquee>
+      
+    </main>
+<section id="request-service">
+    <h1>Form Permintaan Layanan</h1>
+    <form id="service-request-form">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="phone">Telepon:</label>
+        <input type="text" id="phone" required><br>
+
+        <label for="serviceType">Jenis Layanan:</label>
+        <select id="serviceType" name="serviceType" required>
+            <option value="">Pilih Layanan</option>
+            <option value="perawatan-rutin">Perawatan Rutin</option>
+            <option value="perbaikan-mesin">Perbaikan Mesin</option>
+            <option value="penggantian-oli">Penggantian Oli dan Filter</option>
+            <option value="servis-rem">Servis Rem dan Suspensi</option>
+            <option value="diagnosa-elektronik">Diagnosa Elektronik</option>
+			 <option value="diagnosa-elektronik">Lainya</option>
+        </select><br>
+
+        <label for="message">Pesan:</label>
+        <textarea id="message" required></textarea><br>
+
+        <button type="submit">Kirim Permintaan</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Telepon</th>
+                <th>Jenis Layanan</th>
+                <th>Pesan</th>
+            </tr>
+        </thead>
+        <tbody id="Listlayanan">
+            <!-- Data layanan akan ditampilkan di sini -->
+        </tbody>
+    </table>
+
+</section>
+
+<script>
+    var layanan = [];
+
+    document.getElementById("service-request-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Mencegah form dari pengiriman default
+
+        // Mengambil nilai dari input
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var serviceType = document.getElementById("serviceType").value;
+        var message = document.getElementById("message").value;
+
+        // Menambahkan data ke dalam array
+        layanan.push({ name, email, phone, serviceType, message });
+
+        // Menampilkan daftar layanan
+        displayProducts();
+
+        // Mengosongkan input
+        document.getElementById('service-request-form').reset();
+
+        // Menampilkan dialog box
+        alert("Layanan telah didaftarkan!");
+    });
+
+    // Fungsi untuk menampilkan layanan
+    function displayProducts() {
+        var productList = document.getElementById('Listlayanan');
+        productList.innerHTML = ''; // Mengosongkan daftar sebelum menampilkan yang baru
+
+        layanan.forEach(function(item, index) {
+            var row = document.createElement('tr');
+            var cellIndex = document.createElement('td');
+            var cellName = document.createElement('td');
+            var cellEmail = document.createElement('td');
+            var cellPhone = document.createElement('td');
+            var cellServiceType = document.createElement('td');
+            var cellMessage = document.createElement('td');
+
+            cellIndex.textContent = index + 1; // Nomor urut
+            cellName.textContent = item.name; // Nama
+            cellEmail.textContent = item.email; // Email
+            cellPhone.textContent = item.phone; // Telepon
+            cellServiceType.textContent = item.serviceType; // Jenis Layanan
+            cellMessage.textContent = item.message; // Pesan
+
+            row.appendChild(cellIndex);
+            row.appendChild(cellName);
+            row.appendChild(cellEmail);
+            row.appendChild(cellPhone);
+            row.appendChild(cellServiceType);
+            row.appendChild(cellMessage);
+            productList.appendChild(row);
+        });
+    }
+</script>
+
+
+    <footer>
+        <p>&copy; 2023 @alifart. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>

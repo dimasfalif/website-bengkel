@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    background-color: #333;
+    color: white;
+    
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+   
+
+    
+}
+
+.logo img {
+    height: 150px; 
+   border-radius: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+#about {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bengkel-image {
+    width: 300px; 
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px; 
+}
+.text {
+    max-width: 600px; 
+}
+
+.text ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.layanan{
+	padding: 20px;
+background-color: #f9f9f9;
+}
+.layanan h2{
+    text-align: center;
+}
+#gallery {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center; /
+}
+
+.gallery-container {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+.gallery-image {
+    width: 250px; 
+    height: auto; 
+    border-radius: 8px; 
+}
+#request-service {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+label {
+    font-weight: bold; 
+}
+
+input, select, textarea {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+button {
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#response-message {
+    margin-top: 10px; 
+    font-weight: bold; 
+}
+
+
+
+video {
+    width: 100%; 
+    height:auto;
+    display: block;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px;
+}
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+/*halaman kontak*/
+#contact-info, #contact-form {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
